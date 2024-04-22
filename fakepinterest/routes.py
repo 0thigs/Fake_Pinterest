@@ -5,6 +5,10 @@ from fakepinterest import app
 def homepage():
     return render_template('homepage.html')
 
+@app.route("/login/")
+def login():
+    return render_template('login.html')
+
 @app.route("/user/<user>")
 def profile(user):
     return render_template('profile.html', user=user)
